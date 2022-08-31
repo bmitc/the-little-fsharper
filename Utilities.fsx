@@ -1,8 +1,7 @@
-/// Helper functions mainly to help print out types in .NET Interactive notebooks
+/// Helper functions mainly to help print out types in .NET Interactive notebooks.
+/// This module is only intended to be used in the context of a notebook.
 module Utilities
 
-open Microsoft.FSharp.Quotations
-open Microsoft.FSharp.Quotations.Patterns
 open Microsoft.FSharp.Reflection
 open System.Text.RegularExpressions
 
@@ -21,7 +20,7 @@ let private replaceGeneric typeString =
 
 /// Helper function to return the type of a value in a .NET Interactive notebook as a string
 let getType value =
-    value.GetType().ToDisplayString()
+    value.GetType().ToDisplayString() // ToDisplayString is provided by .NET Interactive
     |> removeFSI
     |> removeSystem
     |> replaceObject
@@ -46,6 +45,9 @@ let getTypeSignature f =
         |> replaceGeneric
         |> replaceObject
     typeSignature
+
+/// Helper function to print a value
+let print value = printfn "%A" value
 
 /// Helper function to print a value with a label
 let printWithLabel label value = printfn "%s: %A" label value
