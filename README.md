@@ -2,6 +2,12 @@
 
 This repository is a collection of [.NET Interactive](https://github.com/dotnet/interactive) notebooks that serve as [F#](https://fsharp.org/) implementations and annotations of the various types, functions, and questions and their responses found in the wonderful book [*The Little MLer* by Matthias Felleisen and Daniel P. Friedman](https://mitpress.mit.edu/9780262561143/the-little-mler/).
 
+Just click on and browse the notebooks for the various chapters to get a taste. GitHub renders the F# notebooks in any browser, so you can view the notebooks without installing any code. You can even press `.` while viewing this repository, and GitHub will open up a web-based Visual Studio Code instance, so you can view the code that way as well. Try it!
+
+Note: This repository is in progress of converting the old F# script files to notebooks and finishing all the chapters.
+
+## Introduction
+
 The book's code is closest to Standard ML (SML), as explained on page xiii, and there is some guidance on using Objective Caml (OCaml) with the book, as explained on pages xv - xvi. While both SML and OCaml are wonderful languages, these days, F# has some features that makes it a wonderful tool to go through *The Little MLer* with.
 
 1. F# is heavily inspired by SML and OCaml and originally was basically a port of OCaml to .NET. These days, it is its own language though.
