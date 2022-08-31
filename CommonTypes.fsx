@@ -5,3 +5,11 @@ module CommonTypes
 type Num =
     | Zero
     | OneMoreThan of Num
+
+/// From Chapter 3
+type Pizza =
+    | Crust
+    | Cheese  of Pizza
+    | Onion   of Pizza
+    | Anchovy of Pizza
+    | Sausage of Pizza
